@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 메시지 예제</title>
+    <style>
+        /* 화면 중앙 정렬 및 기본 디자인 */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Malgun Gothic', sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        /* 버튼 스타일 */
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 화면에 나타날 메시지 스타일 */
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 클릭할 버튼 -->
+    <button onclick="showMessage()">여기를 눌러보세요!</button>
+
+    <!-- 메시지가 표시될 공간 -->
+    <p id="message"></p>
+
+    <script>
+        function showMessage() {
+            // 1. 화면의 글자 변경하기
+            document.getElementById("message").innerText = "아나운서 안혜진 화이팅!!.";
+
+            // 2. 만약 브라우저 알림창(팝업)으로 띄우고 싶다면 아래 줄의 '//'를 지우세요.
+            alert("조영록");
+        }
+    </script>
+
+</body>
+</html>
